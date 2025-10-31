@@ -69,9 +69,9 @@ def delete_student():
     cursor.execute ('SELECT * from DB_student where db_student_id = ?',(student_id))
     delete = cursor.fetchall()
     cursor.execute('DELETE from DB_student where  db_student_id = ?',(student_id))
-    print ('Following row is delete:',delete)
+    print ('Following rows are delete:',delete)
     conn.commmit()
-    
+
 button_delete = tk.Button(root, text='Delete', command=delete_student)
 button_delete.pack(pady=25)
 
